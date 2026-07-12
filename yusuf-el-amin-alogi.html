@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Yusuf El-Amin Alogi — 2026 BECE Individual Report — Taqwa High School</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy-950:#081527; --navy-900:#0b1e36; --navy-800:#12304f; --navy-700:#1a4066;
+  --gold-600:#a9821c; --gold-500:#c9a227; --gold-400:#dab949; --gold-300:#e8c766;
+  --parchment:#f6f1e3; --parchment-dim:#eee6d1; --ink:#1b2431; --ink-soft:#4a5568;
+  --green:#2f6f52; --green-dim:#e4f0e9; --slate:#3d5a80; --amber:#b9752b;
+  --red:#a23b2e; --red-dim:#f7e6e3; --card:#ffffff;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0; background:var(--parchment); color:var(--ink); font-family:'Lora',serif; line-height:1.55;}
+.display{font-family:'Playfair Display',serif;}
+.mono{font-family:'IBM Plex Mono',monospace;}
+
+.divider{display:flex; align-items:center; gap:14px; margin:0 0 34px 0;}
+.divider .line{flex:1; height:1px; background:linear-gradient(90deg, transparent, var(--gold-500), transparent);}
+
+a.backlink{
+  display:inline-flex; align-items:center; gap:6px; color:var(--gold-300); text-decoration:none;
+  font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.06em;
+}
+a.backlink:hover{text-decoration:underline;}
+
+header.hero{
+  position:relative; background:radial-gradient(ellipse at 20% -10%, #163a5f 0%, var(--navy-900) 55%, var(--navy-950) 100%);
+  color:var(--parchment); padding:36px 8vw 42px; overflow:hidden; isolation:isolate;
+}
+header.hero::before{
+  content:""; position:absolute; inset:0;
+  background-image:
+    repeating-linear-gradient(45deg, rgba(201,162,39,0.055) 0 2px, transparent 2px 46px),
+    repeating-linear-gradient(-45deg, rgba(201,162,39,0.055) 0 2px, transparent 2px 46px);
+  z-index:-1;
+}
+header.hero::after{
+  content:""; position:absolute; right:-140px; top:-140px; width:420px; height:420px; border-radius:50%;
+  background:radial-gradient(circle, rgba(201,162,39,0.16), transparent 70%); z-index:-1;
+}
+.eyebrow{font-family:'IBM Plex Mono',monospace; letter-spacing:.22em; text-transform:uppercase; font-size:11px; color:var(--gold-300); display:flex; align-items:center; gap:10px; margin-top:18px;}
+.eyebrow::before{content:"◆"; color:var(--gold-500); font-size:9px;}
+
+.student-head{display:flex; justify-content:space-between; align-items:flex-end; gap:20px; flex-wrap:wrap; margin-top:10px;}
+h1.title{font-size:clamp(28px,4.2vw,44px); margin:8px 0 4px; font-weight:800; letter-spacing:-.01em;}
+.reg-line{font-family:'IBM Plex Mono',monospace; font-size:13px; color:#c9d3e0;}
+.sex-pill{display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:11px; padding:3px 10px; border-radius:20px; font-weight:600; margin-left:10px; vertical-align:middle;}
+.sex-pill.F{background:#f3e6ee; color:#9c3f74;}
+.sex-pill.M{background:#e3edf7; color:#28588c;}
+
+.gpa-badge{
+  text-align:center; background:linear-gradient(160deg, var(--navy-800), var(--navy-950));
+  border:1px solid var(--gold-600); border-radius:12px; padding:16px 26px; min-width:150px;
+}
+.gpa-badge .lbl{font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:#9fb0c6;}
+.gpa-badge .val{font-family:'Playfair Display',serif; font-weight:800; font-size:34px; color:var(--gold-300); line-height:1.1; margin-top:4px;}
+.gpa-badge .rk{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--parchment); margin-top:6px;}
+
+.hero-meta{display:flex; flex-wrap:wrap; gap:24px 40px; margin-top:26px; padding-top:20px; border-top:1px solid rgba(232,199,102,0.25);}
+.hero-meta .item .k{font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:#8fa3bc;}
+.hero-meta .item .v{font-family:'Playfair Display',serif; font-size:17px; font-weight:600; color:var(--parchment); margin-top:2px;}
+
+main{max-width:1080px; margin:0 auto; padding:0 8vw;}
+section{padding:46px 0;}
+h2.section-title{font-size:clamp(21px,2.6vw,27px); font-weight:700; margin:0 0 6px; color:var(--navy-900);}
+p.section-sub{color:var(--ink-soft); margin:0 0 26px; max-width:70ch; font-size:15px;}
+.tag{display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--gold-600); background:rgba(201,162,39,0.12); padding:4px 10px; border-radius:3px; margin-bottom:10px;}
+
+.stat-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:14px;}
+.stat-card{background:var(--card); border:1px solid #e6ddc4; border-radius:10px; padding:18px 18px; position:relative; overflow:hidden;}
+.stat-card::before{content:""; position:absolute; left:0; top:0; bottom:0; width:4px; background:var(--gold-500);}
+.stat-card .num{font-family:'Playfair Display',serif; font-size:28px; font-weight:800; color:var(--navy-900); line-height:1;}
+.stat-card .lbl{margin-top:6px; font-size:11px; color:var(--ink-soft); text-transform:uppercase; letter-spacing:.05em; font-family:'IBM Plex Mono',monospace;}
+
+table.result-table{width:100%; border-collapse:collapse; background:var(--card); border-radius:10px; overflow:hidden; border:1px solid #e6ddc4;}
+table.result-table th{
+  background:var(--navy-900); color:var(--parchment); text-align:left; padding:11px 14px;
+  font-family:'IBM Plex Mono',monospace; font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; font-weight:500;
+}
+table.result-table td{padding:10px 14px; border-bottom:1px solid #f0e9d5; font-size:14px;}
+table.result-table tr:last-child td{border-bottom:none;}
+table.result-table tr:hover td{background:#fbf8ef;}
+.grade-pill{display:inline-block; width:26px; height:26px; line-height:26px; text-align:center; border-radius:6px; color:#fff; font-family:'IBM Plex Mono',monospace; font-weight:700; font-size:12px;}
+.gA{background:var(--gold-600);} .gB{background:var(--green);} .gC{background:var(--slate);} .gP{background:var(--amber);} .gF{background:var(--red);}
+.delta-up{color:var(--green); font-family:'IBM Plex Mono',monospace; font-size:12.5px;}
+.delta-down{color:var(--red); font-family:'IBM Plex Mono',monospace; font-size:12.5px;}
+.delta-even{color:var(--ink-soft); font-family:'IBM Plex Mono',monospace; font-size:12.5px;}
+
+.grid-2{display:grid; grid-template-columns:1.25fr 1fr; gap:32px;}
+@media(max-width:820px){.grid-2{grid-template-columns:1fr;}}
+
+.subject-row{display:flex; align-items:center; gap:12px; margin-bottom:13px;}
+.subject-row .name{width:118px; flex-shrink:0; font-size:12.5px; font-weight:600; color:var(--navy-900); font-family:'IBM Plex Mono',monospace;}
+.bar-track{flex:1; background:var(--parchment-dim); border-radius:20px; height:18px; position:relative; overflow:visible;}
+.bar-fill{height:100%; border-radius:20px; display:flex; align-items:center; justify-content:flex-end; padding-right:8px;}
+.bar-fill span{font-size:10px; color:#fff; font-weight:700; font-family:'IBM Plex Mono',monospace;}
+.avg-tick{position:absolute; top:-3px; width:2px; height:24px; background:var(--navy-900);}
+.avg-tick::after{content:"avg"; position:absolute; top:-14px; left:50%; transform:translateX(-50%); font-size:8px; color:var(--ink-soft); font-family:'IBM Plex Mono',monospace;}
+
+.donut-wrap{display:flex; align-items:center; gap:22px; flex-wrap:wrap; justify-content:center;}
+.legend{display:flex; flex-direction:column; gap:8px;}
+.legend .row{display:flex; align-items:center; gap:8px; font-size:12.5px;}
+.legend .sw{width:11px; height:11px; border-radius:3px; flex-shrink:0;}
+.legend .row b{font-family:'IBM Plex Mono',monospace; margin-left:auto; padding-left:12px;}
+
+.insight-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+@media(max-width:700px){.insight-grid{grid-template-columns:1fr;}}
+.insight{background:var(--card); border:1px solid #e6ddc4; border-radius:10px; padding:18px 20px; border-top:3px solid var(--gold-500);}
+.insight.weak{border-top-color:var(--red);}
+.insight h3{margin:0 0 8px; font-family:'Playfair Display',serif; font-size:15px; color:var(--navy-900);}
+.insight p{margin:0; font-size:13.5px; color:var(--ink-soft);}
+.insight .kicker{font-family:'IBM Plex Mono',monospace; font-size:9.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold-600); margin-bottom:6px; display:block;}
+.insight.weak .kicker{color:var(--red);}
+.chip-list{display:flex; flex-wrap:wrap; gap:6px; margin-top:10px;}
+.chip{font-family:'IBM Plex Mono',monospace; font-size:11px; padding:4px 9px; border-radius:20px; background:var(--parchment-dim); color:var(--navy-900);}
+
+.remark-box{background:var(--navy-900); color:var(--parchment); border-radius:12px; padding:26px 28px; position:relative; overflow:hidden;}
+.remark-box::before{content:"“"; position:absolute; top:-10px; left:14px; font-family:'Playfair Display',serif; font-size:90px; color:rgba(201,162,39,0.25);}
+.remark-box p{position:relative; font-size:15.5px; margin:0; font-style:italic; color:#e6ecf3;}
+.remark-box .sig{margin-top:14px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--gold-300);}
+
+.nav-strip{display:flex; justify-content:space-between; align-items:center; margin-top:10px; padding-top:20px; border-top:1px dashed #e6ddc4; font-size:13px;}
+.nav-strip a{color:var(--navy-800); text-decoration:none; font-weight:600;}
+.nav-strip a:hover{text-decoration:underline;}
+
+footer{background:var(--navy-950); color:#8fa3bc; padding:32px 8vw; margin-top:30px; font-size:12px;}
+footer .wrap{max-width:1080px; margin:0 auto; display:flex; justify-content:space-between; flex-wrap:wrap; gap:14px; align-items:center;}
+footer .brand{color:var(--gold-300); font-family:'Playfair Display',serif; font-size:14px;}
+
+.reveal{opacity:0; transform:translateY(14px); transition:opacity .5s ease, transform .5s ease;}
+.reveal.in{opacity:1; transform:none;}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <a class="backlink" href="index.html">&larr; All Students Results</a>
+  <div class="eyebrow">Taqwa High School &nbsp;·&nbsp; 2026 BECE &nbsp;·&nbsp; School No. 0201437</div>
+  <div class="student-head">
+    <div>
+      <h1 class="title">Yusuf El-Amin Alogi <span class="sex-pill M">M</span></h1>
+      <div class="reg-line">2630056996AF &nbsp;·&nbsp; DOB 07/06/2014 &nbsp;·&nbsp; Age 12</div>
+    </div>
+    <div class="gpa-badge">
+      <div class="lbl">Cohort GPA</div>
+      <div class="val">2.50</div>
+      <div class="rk">Rank 18 of 20</div>
+    </div>
+  </div>
+  <div class="hero-meta">
+    <div class="item"><div class="k">Subjects Sat</div><div class="v">12</div></div>
+    <div class="item"><div class="k">Distinctions (A)</div><div class="v">0</div></div>
+    <div class="item"><div class="k">Very Good (B)</div><div class="v">1</div></div>
+    <div class="item"><div class="k">Credits (C)</div><div class="v">5</div></div>
+    <div class="item"><div class="k">Passes (P)</div><div class="v">5</div></div>
+    <div class="item"><div class="k">Fails (F)</div><div class="v">1</div></div>
+  </div>
+</header>
+
+<main>
+
+<section class="reveal">
+  <span class="tag">Result Sheet</span>
+  <h2 class="section-title">Subject-by-subject result</h2>
+  <p class="section-sub">Every grade Yusuf El-Amin Alogi was awarded, compared against the cohort average for that subject (20 present candidates).</p>
+  <table class="result-table">
+    <thead><tr><th>Subject</th><th>Grade</th><th>Points</th><th>Meaning</th><th>Cohort Avg</th><th>vs Cohort</th></tr></thead>
+    <tbody id="resultBody"></tbody>
+  </table>
+</section>
+
+<div class="divider"><div class="line"></div></div>
+
+<section class="reveal">
+  <div class="grid-2">
+    <div>
+      <span class="tag">Visual Breakdown</span>
+      <h2 class="section-title" style="font-size:22px;">Grade points vs. cohort average</h2>
+      <p class="section-sub" style="margin-bottom:18px;">Bar length is Yusuf's grade point; the dark tick marks where the cohort sits on average.</p>
+      <div id="subjectBars"></div>
+    </div>
+    <div>
+      <span class="tag">Own Distribution</span>
+      <h2 class="section-title" style="font-size:22px;">Grade mix</h2>
+      <p class="section-sub" style="margin-bottom:18px;">Share of each grade across all 12 subjects sat.</p>
+      <div class="donut-wrap">
+        <svg id="donut" width="170" height="170" viewBox="0 0 170 170"></svg>
+        <div class="legend" id="donutLegend"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="line"></div></div>
+
+<section class="reveal">
+  <span class="tag">Performance Analysis</span>
+  <h2 class="section-title">Strengths &amp; weaknesses</h2>
+  <p class="section-sub">Automatically generated from Yusuf's results against his own average and the cohort benchmark.</p>
+  <div class="insight-grid">
+    <div class="insight">
+      <span class="kicker">Best Performance</span>
+      <h3 id="strengthTitle"></h3>
+      <p id="strengthBody"></p>
+      <div class="chip-list" id="strengthChips"></div>
+    </div>
+    <div class="insight weak">
+      <span class="kicker">Needs Attention</span>
+      <h3 id="weaknessTitle"></h3>
+      <p id="weaknessBody"></p>
+      <div class="chip-list" id="weaknessChips"></div>
+    </div>
+  </div>
+</section>
+
+<section class="reveal">
+  <div class="remark-box">
+    <p id="remarkText"></p>
+    <div class="sig">— Head of School, Taqwa High School</div>
+  </div>
+  <div class="nav-strip">
+    <a href="index.html">&larr; Back to full result list</a>
+    <span class="mono" style="color:var(--ink-soft);font-size:11.5px;">Page generated from School No. 0201437 · 2026 BECE Result Sheet</span>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><div class="brand">Taqwa High School</div><div>Grooming for Life</div></div>
+    <div>Individual Result Analysis · 2026 BECE · Off Iju Road, Agege, Lagos</div>
+  </div>
+</footer>
+
+<script>
+const grades = {"Eng": "P", "Mth": "C", "Fre": "C", "Ara": "P", "Yol1": "F", "Bus": "C", "Irs": "B", "Cca": "P", "Bst": "C", "Pvs": "P", "Nve": "P", "His": "C"};
+const cohortAvg = {"Eng": 3.25, "Mth": 3.15, "Fre": 3.2, "Ara": 2.4, "Yol1": 2.3125, "Bus": 3.25, "Irs": 3.75, "Cca": 2.7, "Bst": 3.15, "Pvs": 3.1, "Nve": 3.55, "His": 3.35, "Hal2": 3.25};
+const subjLabel = {Eng:'English',Mth:'Mathematics',Fre:'French',Ara:'Arabic',Yol1:'Yoruba',Hal2:'Hausa',Bus:'Business Studies',Irs:'Islamic Rel. Studies',Cca:'Cultural & Creative Arts',Bst:'Basic Sci. & Tech',Pvs:'Pre-Vocational Studies',Nve:'National Values Educ.',His:'History'};
+const points = {A:5,B:4,C:3,P:2,F:1};
+const gradeColor = {A:'#a9821c',B:'#2f6f52',C:'#3d5a80',P:'#b9752b',F:'#a23b2e'};
+const gradeName = {A:'Distinction',B:'Very Good',C:'Credit',P:'Pass',F:'Fail'};
+const subjOrder = ['Eng','Mth','Fre','Ara','Yol1','Hal2','Bus','Irs','Cca','Bst','Pvs','Nve','His'];
+const entries = subjOrder.filter(s=>grades[s]).map(s=>({subj:s, grade:grades[s]}));
+
+// table
+document.getElementById('resultBody').innerHTML = entries.map(e=>{
+  const pt = points[e.grade], avg = cohortAvg[e.subj];
+  const diff = pt - avg;
+  const dCls = diff>0.15?'delta-up':(diff<-0.15?'delta-down':'delta-even');
+  const dSym = diff>0.15?'▲ above':(diff<-0.15?'▼ below':'≈ on par');
+  return `<tr>
+    <td>${subjLabel[e.subj]} <span class="mono" style="color:var(--ink-soft);font-size:11px;">(${e.subj.toUpperCase()})</span></td>
+    <td><span class="grade-pill g${e.grade}">${e.grade}</span></td>
+    <td class="mono">${pt}.0</td>
+    <td>${gradeName[e.grade]}</td>
+    <td class="mono">${avg.toFixed(2)}</td>
+    <td class="${dCls}">${dSym}</td>
+  </tr>`;
+}).join('');
+
+// bar chart with cohort avg tick
+document.getElementById('subjectBars').innerHTML = entries.map(e=>{
+  const pt = points[e.grade], avg = cohortAvg[e.subj];
+  const pct = (pt/5*100).toFixed(1);
+  const avgPct = (avg/5*100).toFixed(1);
+  return `<div class="subject-row">
+    <div class="name">${e.subj.toUpperCase()}</div>
+    <div class="bar-track">
+      <div class="bar-fill" style="width:${pct}%; background:${gradeColor[e.grade]}"><span>${e.grade}</span></div>
+      <div class="avg-tick" style="left:${avgPct}%"></div>
+    </div>
+  </div>`;
+}).join('');
+
+// donut of own distribution
+const counts = {A:0,B:0,C:0,P:0,F:0};
+entries.forEach(e=>counts[e.grade]++);
+const total = entries.length;
+const order = ['A','B','C','P','F'];
+let cumulative = 0;
+const r=62, cx=85, cy=85;
+let paths='';
+order.forEach(g=>{
+  const val = counts[g];
+  if(!val) return;
+  const frac = val/total;
+  const startAngle = cumulative*2*Math.PI - Math.PI/2;
+  cumulative += frac;
+  const endAngle = cumulative*2*Math.PI - Math.PI/2;
+  const x1=cx+r*Math.cos(startAngle), y1=cy+r*Math.sin(startAngle);
+  const x2=cx+r*Math.cos(endAngle), y2=cy+r*Math.sin(endAngle);
+  const large = frac>0.5?1:0;
+  paths += `<path d="M${cx},${cy} L${x1.toFixed(2)},${y1.toFixed(2)} A${r},${r} 0 ${large} 1 ${x2.toFixed(2)},${y2.toFixed(2)} Z" fill="${gradeColor[g]}" stroke="#f6f1e3" stroke-width="2"/>`;
+});
+document.getElementById('donut').innerHTML = paths + `<circle cx="${cx}" cy="${cy}" r="36" fill="#f6f1e3"/><text x="${cx}" y="${cy-2}" text-anchor="middle" font-family="Playfair Display" font-weight="800" font-size="18" fill="#0b1e36">${total}</text><text x="${cx}" y="${cy+14}" text-anchor="middle" font-family="IBM Plex Mono" font-size="8" fill="#4a5568">SUBJECTS</text>`;
+document.getElementById('donutLegend').innerHTML = order.filter(g=>counts[g]>0).map(g=>`
+  <div class="row"><div class="sw" style="background:${gradeColor[g]}"></div>${gradeName[g]} (${g}) <b>${counts[g]}</b></div>
+`).join('');
+
+// strengths / weaknesses
+const sorted = [...entries].sort((a,b)=>points[b.grade]-points[a.grade]);
+const bestPt = points[sorted[0].grade];
+const worstPt = points[sorted[sorted.length-1].grade];
+const bestSubs = sorted.filter(e=>points[e.grade]===bestPt);
+const worstSubs = sorted.filter(e=>points[e.grade]===worstPt);
+
+document.getElementById('strengthTitle').textContent = bestSubs.map(e=>subjLabel[e.subj]).join(' & ');
+document.getElementById('strengthBody').textContent = `Highest grade${bestSubs.length>1?'s':''} achieved: ${gradeName[sorted[0].grade]} (${sorted[0].grade}) in ${bestSubs.length} subject${bestSubs.length>1?'s':''}.`;
+document.getElementById('strengthChips').innerHTML = bestSubs.map(e=>`<span class="chip">${subjLabel[e.subj]} — ${e.grade}</span>`).join('');
+
+document.getElementById('weaknessTitle').textContent = worstSubs.map(e=>subjLabel[e.subj]).join(' & ');
+document.getElementById('weaknessBody').textContent = worstPt<=2
+  ? `Lowest grade recorded: ${gradeName[sorted[sorted.length-1].grade]} (${sorted[sorted.length-1].grade}) in ${worstSubs.length} subject${worstSubs.length>1?'s':''} — priority area for revision.`
+  : `No subject fell below a Credit — the weakest area is still a respectable ${gradeName[sorted[sorted.length-1].grade]} (${sorted[sorted.length-1].grade}).`;
+document.getElementById('weaknessChips').innerHTML = worstSubs.map(e=>`<span class="chip">${subjLabel[e.subj]} — ${e.grade}</span>`).join('');
+
+// remark
+const avgPts = entries.reduce((a,e)=>a+points[e.grade],0)/entries.length;
+const aboveCount = entries.filter(e=>points[e.grade]>cohortAvg[e.subj]+0.15).length;
+let remark;
+if(avgPts>=4){
+  remark = `An outstanding overall performance, placing consistently among the cohort's top results. Keep up the excellent standard and continue mentoring peers where possible.`;
+}else if(avgPts>=3.3){
+  remark = `A solid, above-average performance across the board. Outperformed the cohort average in ${aboveCount} of ${entries.length} subjects — with a little more consistency, distinctions are well within reach.`;
+}else if(avgPts>=2.6){
+  remark = `A fair, middling performance this term. There is a clear split between stronger and weaker subjects — focused revision on the weaker areas identified above should lift the overall average meaningfully.`;
+}else{
+  remark = `This result falls below the cohort standard and calls for closer academic support, particularly in the subject(s) flagged above. With deliberate remediation, steady improvement is achievable before the next diet.`;
+}
+document.getElementById('remarkText').textContent = remark;
+
+const io = new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in'); io.unobserve(e.target);}})},{threshold:0.06});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
